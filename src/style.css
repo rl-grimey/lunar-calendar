@@ -1,0 +1,18 @@
+/* Styles */
+
+:root {
+  --bg-color: #222222;
+  --fg-color: #f8f8f8;
+}
+
+.svg-base {
+  background-color: var(--bg-color);
+}
+
+.moon-group {
+
+}
+
+.moon-moon {
+  fill: var(--fg-color);
+}
