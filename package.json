@@ -1,0 +1,30 @@
+{
+  "name": "lunar-calendar",
+  "version": "1.0.0",
+  "description": "Lunar Calendar Visualization",
+  "main": "index.js",
+  "dependencies": {
+    "d3": "^5.7.0",
+    "suncalc": "^1.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryan-p-larson/lunar-calendar.git"
+  },
+  "keywords": [
+    "viz",
+    "lunar",
+    "moon",
+    "visualization"
+  ],
+  "author": "Ryan Larson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryan-p-larson/lunar-calendar/issues"
+  },
+  "homepage": "https://github.com/ryan-p-larson/lunar-calendar#readme"
+}
