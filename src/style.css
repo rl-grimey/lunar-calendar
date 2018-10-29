@@ -9,10 +9,29 @@
   background-color: var(--bg-color);
 }
 
+.axis {
+  color: var(--fg-color);
+}
+.axis text {
+  text-align: right;
+  alignment-baseline: middle;
+}
+
+
+
+
+
 .moon-group {
 
 }
 
 .moon-moon {
   fill: var(--fg-color);
+  stroke: 1px solid var(--fg-color);
+}
+
+.moon-shadow {
+  fill: var(--bg-color);
+  stroke: 2px solid var(--bg-color);
+
 }
