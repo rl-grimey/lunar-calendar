@@ -7,15 +7,19 @@ const monthFormatter      = d3.timeFormat("%B");
 const dayOfMonthFormatter = d3.timeFormat("%d");
 
 // Range + dates
-const start = new Date(2019, 0, 0, 0, 0, 0, 0);
+const start = new Date(2019, 0, 1, 0, 0, 0, 0);
 const end   = d3.timeYear.offset(start, 1);
 const days  = d3.timeDay.range(start, end);
 
 
 // GPS Location: Chicago
-const LAT = 41.8781; 
-const LON = 87.6298;
+//const LAT = 41.8781; 
+//const LON = 87.6298;
 
+// Austin
+// 30.2672° N, 97.7431° W
+const LAT = 30.2672;
+const LON = 97.7431;
 
 
 /********************************************************************************/
