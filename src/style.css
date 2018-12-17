@@ -1,7 +1,7 @@
 /* Styles */
 
 :root {
-  --bg-color: #222222;
+  --bg-color: #111111;
   --fg-color: #f8f8f8;
 }
 
@@ -11,19 +11,34 @@
 
 .axis {
   color: var(--fg-color);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  vertical-align: middle;
+  white-space: pre;
 }
-.axis text {
-  text-align: right;
-  alignment-baseline: middle;
+
+.axis--y {
+  letter-spacing: 1.5em;
+  text-transform: uppercase;
+}
+
+
+.calendar--title {
+  fill: var(--fg-color);
+}
+#supratitle {
+  font-size: 40px;
+}
+#subtitle {
+  font-size: 14px;
+  font-weight: 500;
 }
 
 
 
 
 
-.moon-group {
-
-}
 
 .moon-moon {
   fill: var(--fg-color);
