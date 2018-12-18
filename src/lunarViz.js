@@ -22,18 +22,18 @@ lunarEvts.forEach(evt => {
   var evtX = xVal(evt.date),
       evtY = yVal(evt.date);
 
-  let moon_ind = 0.22 * halfR;
+  let moon_ind = 0.7 * halfR;
   if (evt.type === 'new') {
     g.append('circle')
       .attr('transform', `translate(${evtX}, ${evtY + halfR})`)
-      .attr('fill',   FG)
+      .attr('fill',   BG)
       .attr('stroke', FG)
       .attr('r', halfR);
 
     g.append('circle')
       .attr('transform', `translate(${evtX}, ${evtY + halfR})`)
-      .attr('fill',   BG)
-      .attr('stroke', BG)
+      .attr('fill',   FG)
+      .attr('stroke', FG)
       //.attr('cx', moon_ind)
       //.attr('cy', moon_ind)
       .attr('r', moon_ind);
