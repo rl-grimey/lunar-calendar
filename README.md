@@ -11,5 +11,12 @@ Crescent moon generators taken from [this lunar calendar](https://github.com/cod
 
 #### 2019
 
+*Dark*
+
 ![2019 Lunar Calendar](docs/lunar-calendar-2019.png)
 
+*\*\*\**
+
+*Light*
+
+![2019 Lunar Calendar](docs/lunar-calendar-2019-inverse.png)
