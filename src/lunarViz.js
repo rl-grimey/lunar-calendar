@@ -25,8 +25,8 @@ lunarEvts.forEach(evt => {
   if (evt.type === 'new') {
     g.append('circle')
       .attr('transform', `translate(${evtX}, ${evtY + halfR})`)
-      .attr('fill', '#111111')
-      .attr('stroke', '#f8f8f8')
+      .attr('fill', BG)
+      .attr('stroke', FG)
       .attr('r', halfR);
   } else {
     // Dots
@@ -37,8 +37,8 @@ lunarEvts.forEach(evt => {
     // Sun circle
     g.append('circle')
       .attr('transform', `translate(${evtX}, ${evtY + halfR})`)
-      .attr('fill', '#f8f8f8')
-      .attr('stroke', '#111111')
+      .attr('fill', FG)
+      .attr('stroke', BG)
       .attr('r', halfR);
   
     for (var i=0; i < 360; i+= dotAngle) {
@@ -48,7 +48,7 @@ lunarEvts.forEach(evt => {
 
       g.append("circle")
         .attr('transform', `translate(${evtX}, ${evtY + halfR})`)
-        .attr("fill", '#f8f8f8')
+        .attr("fill", FG)
         .attr('opacity', 0.9)
         .attr("cx", c)
         .attr("cy", s)
@@ -104,8 +104,8 @@ function makePath(day, radius) {
     right_of_center,
     lit_from_left } = calcTerminatorArc(day.illumination.phase, radius/2);
 
-  let CSS_LIGHT = '#f8f8f8';
-  let CSS_DARK  = '#111111';
+  let CSS_LIGHT = FG;
+  let CSS_DARK  = BG;
   let color_left  = (lit_from_left === true) ? CSS_LIGHT : CSS_DARK;
   let color_right = (lit_from_left === true) ? CSS_DARK  : CSS_LIGHT;
 

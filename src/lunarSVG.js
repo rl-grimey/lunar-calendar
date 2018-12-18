@@ -14,8 +14,8 @@ const DAYS_MN = d3.range(1, 32, 1);
 const MNS_YR  = d3.timeMonths(START, END).map(d3.timeFormat("%B"));
 
 // Colors
-const FG = '#f8f8f8';
-const BG = '#111111';
+const BG = '#f8f8f8';
+const FG = '#111111';
 
 
 // SCALES
