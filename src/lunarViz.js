@@ -22,12 +22,21 @@ lunarEvts.forEach(evt => {
   var evtX = xVal(evt.date),
       evtY = yVal(evt.date);
 
+  let moon_ind = 0.22 * halfR;
   if (evt.type === 'new') {
     g.append('circle')
       .attr('transform', `translate(${evtX}, ${evtY + halfR})`)
-      .attr('fill', BG)
+      .attr('fill',   FG)
       .attr('stroke', FG)
       .attr('r', halfR);
+
+    g.append('circle')
+      .attr('transform', `translate(${evtX}, ${evtY + halfR})`)
+      .attr('fill',   BG)
+      .attr('stroke', BG)
+      //.attr('cx', moon_ind)
+      //.attr('cy', moon_ind)
+      .attr('r', moon_ind);
   } else {
     // Dots
     let dots = 10;
@@ -37,9 +46,9 @@ lunarEvts.forEach(evt => {
     // Sun circle
     g.append('circle')
       .attr('transform', `translate(${evtX}, ${evtY + halfR})`)
-      .attr('fill', FG)
-      .attr('stroke', BG)
-      .attr('r', halfR);
+      .attr('fill',   BG)
+      .attr('stroke', FG)
+      .attr('r',      halfR);
   
     for (var i=0; i < 360; i+= dotAngle) {
       let radii = i * Math.PI / 180;
@@ -104,8 +113,8 @@ function makePath(day, radius) {
     right_of_center,
     lit_from_left } = calcTerminatorArc(day.illumination.phase, radius/2);
 
-  let CSS_LIGHT = FG;
-  let CSS_DARK  = BG;
+  let CSS_LIGHT = BG;
+  let CSS_DARK  = FG;
   let color_left  = (lit_from_left === true) ? CSS_LIGHT : CSS_DARK;
   let color_right = (lit_from_left === true) ? CSS_DARK  : CSS_LIGHT;
 
@@ -120,15 +129,32 @@ function makePath(day, radius) {
   let moonX = xVal(day.date) - halfR;
   let moonY = yVal(day.date);
 
+  // Add an outline for every moon
+  g.append('circle')
+    .attr('transform', `translate(${moonX}, ${moonY})`)
+    .attr('cx', halfR)
+    .attr('cy', halfR)
+    .attr('r', halfR)
+    .attr('fill', BG)
+    .attr('stroke', FG)
+
   g.append('path')
     .attr('transform', `translate(${moonX}, ${moonY})`)
     .attr('d', `${move_to_top} ${terminator_arc} ${disc_left_arc}`)
-    .attr('fill', color_left);
+    .attr('fill', color_left)
+    //.attr('stroke', color_right)
+    //.attr('stroke', FG)
+    //.attr('fill', color_left)
+    //.attr('stroke', color_left);
 
   g.append('path')
     .attr('transform', `translate(${moonX}, ${moonY})`)
     .attr('d', `${move_to_top} ${terminator_arc} ${disc_right_arc}`)
-    .attr('fill', color_right);
+    .attr('fill', color_right)
+    //.attr('stroke', color_left)
+    //.attr('stroke', BG)
+    //.attr('fill', color_right)
+    //.attr('stroke', color_right);*/
 }
 
 
